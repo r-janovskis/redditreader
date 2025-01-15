@@ -1,29 +1,31 @@
-# Redux Toolkit TypeScript Example
+# Project Requirements:
 
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+- Build the application using React and Redux
+- Version control your application with Git and host the repository on GitHub
+- Use a project management tool (GitHub Projects, Trello, etc.) to plan your work
+- Write a README (using Markdown) that documents your project including:
 
-**Redux Toolkit**(also known as "RTK" for short) provides a standardized way to write Redux logic. It includes utilities that help simplify many common use cases, including [store setup](https://redux-toolkit.js.org/api/configureStore), [creating reducers and writing immutable update logic](https://redux-toolkit.js.org/api/createreducer), and even [creating entire "slices" of state at once](https://redux-toolkit.js.org/api/createslice). This example showcases each of these features in conjunction with Next.js.
+  - Wireframes
+  - Technologies used
+  - Features
+  - Future work
 
-## Deploy Your Own
+- Write unit tests for your components using Jest and Enzyme
+- Write end-to-end tests for your application
+- Users can use the application on any device (desktop to mobile)
+- Users can use the application on any modern browser
+- Users can access your application at a URL
+- Users see an initial view of the data when first visiting the app
+- Users can search the data using terms
+- Users can filter the data based on categories that are predefined
+- Users are shown a detailed view (modal or new page/route) when they select an item
+- Users are delighted with a cohesive design system
+- Users are delighted with animations and transitions
+- Users are able to leave an error state
+- Get 90+ scores on [Lighthouse](https://pagespeed.web.dev/)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-redux)
+  - We understand you cannot control how media assets like videos and images are sent to the client. It is okay to have a score below 90 for Performance if they are related to the media from Reddit.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
-
-## How to Use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-redux with-redux-app
-```
-
-```bash
-yarn create next-app --example with-redux with-redux-app
-```
-
-```bash
-pnpm create next-app --example with-redux with-redux-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- **OPTIONAL**: Get a custom domain name and use it for your application
+- **OPTIONAL**: Set up a CI/CD workflow to automatically deploy your application when the master branch in the repository changes
+- **OPTIONAL**: Make your application a progressive web app
