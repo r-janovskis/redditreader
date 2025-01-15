@@ -29,3 +29,14 @@
 - **OPTIONAL**: Get a custom domain name and use it for your application
 - **OPTIONAL**: Set up a CI/CD workflow to automatically deploy your application when the master branch in the repository changes
 - **OPTIONAL**: Make your application a progressive web app
+
+# Description
+
+In this project I will use
+
+- React
+- Redux
+- JavaScript
+- HTML
+- CSS
+- Reddit API
