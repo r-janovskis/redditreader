@@ -63,3 +63,12 @@ Below are some high-level points for the project. This document will be updated 
 - Create API request handling to get data from Reddit
 - Create components for the web application
 - Style application so it would be intuitive to use and easily accessible to everyone.
+
+## Wireframe - how will app look like
+
+Below are the wireframe of how I imagine my Reddit reader to look like.
+![image](./wireframes/wireframe.png "Reddit Reader wireframe")
+
+App will consist of 3 main parts - header, content and footer. In header user will see a logo of 'Reddit Reader' (left) and search bar, which he will be user to search for posts in the sub-section (middle). Also a a drop-down list of reddit topics available will be displayed in header (right side).
+In content section app will display posts that are retrieved from reddit API after user has selected a sub-topic.
+And finally in the footer section I will include year when this app was created and some other basic not so interesting information...
