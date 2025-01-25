@@ -2,7 +2,7 @@
 import type { ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
 import { Logo } from "./components/logo/Logo";
-import { Nav } from "./components/Nav";
+import { RedditTopics } from "./components/redditTopics/RedditTopics";
 
 import "./styles/globals.css";
 import styles from "./styles/layout.module.css";
@@ -21,6 +21,7 @@ export default function RootLayout({ children }: Props) {
             <header className={styles.header}>
               <Logo />
               <h1>Hello Reddit Reader!</h1>
+              <RedditTopics />
             </header>
 
             <main className={styles.main}>{children}</main>
