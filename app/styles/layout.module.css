@@ -17,19 +17,24 @@
 .header {
   grid-area: header;
   background-color: lightblue;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main {
   grid-area: main;
 }
 
-.header,
+/* .header,
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .footer {
   grid-area: footer;
