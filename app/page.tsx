@@ -11,4 +11,5 @@ export default function IndexPage() {
 
 export const metadata: Metadata = {
   title: "Reddit Reader",
+  icons:  "/logo.png" ,
 };

@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import type { ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
 import { Logo } from "./components/logo/Logo";
