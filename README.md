@@ -78,23 +78,33 @@ And finally in the footer section I will include year when this app was created 
 ### Starting project
 
 Project was started by using a node.js recat template which has all the necessary frameworks already set up:
+
 - **React** to build beautiful front-end web app
-- **Redux** to manage states for the application and we would be displaying the right data 
+- **Redux** to manage states for the application and we would be displaying the right data
 - **Jest (Enzyme)** to create and run tests as we develop the app
 
-
 To set up the project from the template I followed the steps below:
+
 1. Open command line line
 2. Navigate to folder in which you want your project to be
-3. Run command 
-```npx degit reduxjs/redux-templates/packages/vite-template-redux my-app```
-Replacing **my-app** with a name of your application
+3. Run command
+   `npx degit reduxjs/redux-templates/packages/vite-template-redux my-app`
+   Replacing **my-app** with a name of your application
 4. Navigate into the newly created **my-app** folder
-5. Run command ```npm install``` to install all the dependencies project will be using
+5. Run command `npm install` to install all the dependencies project will be using
 
 ### Setting up remote repo
 
-After initial
+After all the initial setup work is done we create a repo (locally and on github)
+
+- From command line while in the project folder run command `git init` to initialize the local repository
+- On [github](www.github.com) create an empty repository
+- Go back to command line and run command
+  `git remote add origin <link to remote github repo repo>`
+- (Optional) change name of local master branch to main `git branch -m master main`
+- Stage changes with command `git add *`
+- Make initial commit `git commit -m "Initialize project"`
+- Push initial project setup to remote github repo `git push --set-upstream origin main`
 
 ---
 
