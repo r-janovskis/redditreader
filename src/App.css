@@ -1,3 +1,20 @@
+/* 
+----------------------------------------------------------------------------------------------------------------- 
+Formatting of main areas of the page -> header, main and footer
+-----------------------------------------------------------------------------------------------------------------
+*/
+header {
+  background-color: lightblue;
+}
+
+main {
+  background-color: white;
+}
+
+footer {
+  background-color: lightgray;
+}
+
 .App {
   text-align: center;
 }

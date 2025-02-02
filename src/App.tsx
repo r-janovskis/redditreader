@@ -61,6 +61,12 @@ const App = () => {
           </a>
         </span>
       </header>
+      <main>
+        <h1>Main part of the page</h1>
+      </main>
+      <footer>
+        <p>Footer of the page</p>
+      </footer>
     </div>
   )
 }
