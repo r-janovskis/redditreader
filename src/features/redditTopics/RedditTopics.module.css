@@ -1,3 +1,12 @@
 .redditTopics {
-  margin-left: 1rem;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.redditTopics select {
+  width: 90%;
+  height: 2rem;
 }
