@@ -24,6 +24,10 @@ footer {
   pointer-events: none;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-float infinite 3s ease-in-out;
