@@ -8,7 +8,7 @@ describe('RedditTopics', () => {
         expect(RedditTopics).toBeDefined();
     })
 
-    test("Can we get field value using label text", () => {
+    it("Can we get field value using label text", () => {
         renderWithProviders(<RedditTopics />)
     
         expect(screen.getByLabelText("Reddit Topic:")).toBeInTheDocument()
