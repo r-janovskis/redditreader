@@ -1,4 +1,5 @@
 import {  screen, waitFor } from "@testing-library/react"
+import { BrowserRouter } from "react-router-dom"
 import App from "./App"
 import { renderWithProviders } from "./utils/test-utils"
 
@@ -6,7 +7,7 @@ import { renderWithProviders } from "./utils/test-utils"
 describe("App launches correctly and renders with all elements", () => {
   
   beforeEach(() => {
-    renderWithProviders(<App />);
+    renderWithProviders(<BrowserRouter><App /></BrowserRouter>);
   })
 
   it("App has header part with logo", () => {
