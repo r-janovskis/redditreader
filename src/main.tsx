@@ -25,7 +25,10 @@ if (container) {
     //     <App />
     //   </Provider>
     // </React.StrictMode>,
-    <RouterProvider router={appRouter} />
+    <Provider store={store}>
+      <RouterProvider router={appRouter} />
+    </Provider>
+    
   )
 } else {
   throw new Error(
