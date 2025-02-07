@@ -3,19 +3,29 @@ import { createRoot } from "react-dom/client"
 import { Provider } from "react-redux"
 import App from "./App"
 import { store } from "./app/store"
+import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements} from "react-router-dom";
 import "./index.css"
 
 const container = document.getElementById("root")
+
+const appRouter = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route path="/:topic" element={<App />} />
+    </Route>
+  )
+);
 
 if (container) {
   const root = createRoot(container)
 
   root.render(
-    <React.StrictMode>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </React.StrictMode>,
+    // <React.StrictMode>
+    //   <Provider store={store}>
+    //     <App />
+    //   </Provider>
+    // </React.StrictMode>,
+    <RouterProvider router={appRouter} />
   )
 } else {
   throw new Error(
