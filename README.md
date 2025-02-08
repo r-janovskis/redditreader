@@ -10,10 +10,10 @@ Project will get data from reddit using API calls and give user a chance to disp
 
 ## Project Requirements:
 
-- [ ] Build the application using React and Redux
-- [ ] Version control your application with Git and host the repository on GitHub
-- [ ] Use a project management tool (GitHub Projects, Trello, etc.) to plan your work
-- [ ] Write a README (using Markdown) that documents your project including:
+- [x] Build the application using React and Redux
+- [x] Version control your application with Git and host the repository on GitHub
+- [x] Use a project management tool (GitHub Projects, Trello, etc.) to plan your work
+- [x] Write a README (using Markdown) that documents your project including:
 
   - Wireframes
   - Technologies used
@@ -105,6 +105,16 @@ After all the initial setup work is done we create a repo (locally and on github
 - Stage changes with command `git add *`
 - Make initial commit `git commit -m "Initialize project"`
 - Push initial project setup to remote github repo `git push --set-upstream origin main`
+
+### Adding routing
+
+For a good craic I decided to add some routing, so that user would see changes in the browsers URL as he changes reddit topic. For this to be possible there were several steps to be taken:
+
+- We need to install 'react-router-dom' using command `npm install --save react-router-dom`
+- After we have added 'react-router-dom' to our project we can start implementing the feature. I was taking advantage of **useNavigate()** function to make URL changes when user picks a topic.
+- I also had to make changes in **main.tsx** to support app's rendering on different routes. I used nested routes and a placeholder value to represent differnet routes and which components we want to render for each route. (This application is simple, so we pretty much render same component for all routes)
+- Trickiest part about adding routes came for the tests. Adding **useNavigate()** broke all test cases that were rendering components... To fix that I needed to render components between BrowserRouter tags as in example below:
+  **&lt;BrowserRouter>** &lt;Component> **&lt;/BrowserRouter>**
 
 ---
 
