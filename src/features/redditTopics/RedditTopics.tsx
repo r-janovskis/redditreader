@@ -34,6 +34,7 @@ export const RedditTopics = () => {
                 <option value="r/books">Books</option>
                 <option value="r/basketball">basketball</option>
                 <option value="r/crossfit">Crossfit</option>
+                <option value="r/science">Science</option>
             </select>
         </div>
     );
