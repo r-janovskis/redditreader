@@ -13,4 +13,12 @@ export default defineConfig({
     setupFiles: "src/setupTests",
     mockReset: true,
   },
+  optimizeDeps: {
+    esbuildOptions: {
+      target: 'esnext'
+    }
+  },
+  build: {
+    target: 'esnext'
+  },
 })
