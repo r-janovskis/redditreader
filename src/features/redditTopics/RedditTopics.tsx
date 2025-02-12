@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import styles from "./RedditTopics.module.css";
 
 export const RedditTopics = () => {
-    console.log("Hello from RedditTopics");
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
 

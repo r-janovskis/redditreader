@@ -30,7 +30,7 @@ export interface RedditTopicsState {
     end_point: "r/nature",
     numberOfPosts: 10,
     step: 10,
-    posts: initialPosts.data,
+    posts: initialPosts.data.posts,
     status: "idle"
   };
 
@@ -55,7 +55,7 @@ const redditTopicsReducer = {
             end_point: "r/nature",
             numberOfPosts: 10,
             step: 10,
-            posts: initialPosts.data,
+            posts: [],
             status: "idle"
         };
     }
@@ -76,8 +76,10 @@ export const redditTopicsSlice = createAppSlice({
                   state.status = "loading"
                 },
                 fulfilled: (state, action) => {
+                  state.title = action.payload.title
+                  state.end_point = action.payload.end_point
                   state.status = "idle"
-                  state.posts = action.payload
+                  state.posts = action.payload.posts
                 },
                 rejected: state => {
                   state.status = "failed"
