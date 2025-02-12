@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import styles from "./RedditTopics.module.css";
 
 export const RedditTopics = () => {
-
+    console.log("Hello from RedditTopics");
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
 
@@ -14,12 +14,12 @@ export const RedditTopics = () => {
         const link_name: string = event.target.value.substring(2);
 
         dispatch(changeTopic({
-            title: event.target.innerHTML,
-            link_name: link_name,
+            title: link_name[0].toUpperCase() + link_name.slice(1),
+            numberOfPosts: 10,
             end_point: event.target.value
         }
         ));
-    console.log(`navigating to -> ${link_name}`);
+    //console.log(`navigating to -> ${link_name}`);
     navigate(link_name);
     
     }

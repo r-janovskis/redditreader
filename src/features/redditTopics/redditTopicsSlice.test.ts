@@ -1,18 +1,24 @@
 import type { AppStore } from "../../app/store";
 import { makeStore } from "../../app/store";
 import type { RedditTopicsState } from "./redditTopicsSlice";
+import { fetchRedditPosts } from "./redditTopicsAPI";
 import { changeTopic, resetTopic, redditTopicsSlice } from "./redditTopicsSlice";
 
 interface LocalTestContext {
   store: AppStore;
 }
 
+const initialPosts = await fetchRedditPosts("r/nature", "Nature", 10);
+
 describe<LocalTestContext>("redditTopics reducer", it => {
   beforeEach<LocalTestContext>(context => {
     const initialState: RedditTopicsState = {    
       title: "Nature",
       link_name: "nature",
-      end_point: "r/nature"
+      end_point: "r/nature",
+      numberOfPosts: 10,
+      step: 10,
+      posts: initialPosts.data
     }
 
     const store = makeStore({ redditTopics: initialState })

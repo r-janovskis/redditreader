@@ -5,9 +5,15 @@ import { SearchBar } from "./features/searchBar/SearchBar";
 import { RedditTopics } from "./features/redditTopics/RedditTopics";
 import { Post } from "./features/post/Post";
 import { Logo } from "./features/logo/Logo";
+import { redditPosts } from "./features/redditTopics/redditTopicsSlice";
+import { useSelector } from "react-redux";
 import logo from "./../logo.png"
 
 const App = () => {
+
+  const posts= useSelector(redditPosts);
+  console.log(posts);
+
   return (
     <div className="App">
       <header>
@@ -18,7 +24,7 @@ const App = () => {
       </header>
       <main>
         <h1>Main part of the page</h1>
-        { [1,2,3,4,5].map( (item) => <Post key={item} postNr={item} /> )}
+        { posts.map( (item, index) => <Post key={index} title={item.title} end_point={item.endpoint} /> )}
       </main>
       <footer>
         <p>@Reddit Reader, 2025. Created by <span className="bold">Reinis Janovskis</span></p>

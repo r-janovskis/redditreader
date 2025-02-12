@@ -4,14 +4,15 @@ import styles from "./Post.module.css";
 
 
 interface PostProps {
-    postNr: number;
+    title: string;
+    end_point: string;
 }
 
-export const Post = ( {postNr}: PostProps ) => {
+export const Post = ( {title, end_point, }: PostProps ) => {
     return (
         <article className={styles.redditPost}>
-            <h2>Post Nr. {postNr}</h2>
-            <p>Post content</p>
+            <h2>{title}</h2>
+            <p>For this post we will querry the API: {end_point}</p>
         </article>
     );
 };
