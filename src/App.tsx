@@ -12,6 +12,7 @@ import logo from "./../logo.png"
 const App = () => {
 
   const posts= useSelector(redditPosts);
+  console.log(posts);
 
   return (
     <div className="App">
@@ -23,7 +24,7 @@ const App = () => {
       </header>
       <main>
         <h1>Main part of the page</h1>
-        { posts.map( (item, index) => <Post key={index} title={item.title} end_point={item.endpoint} /> )}
+        { posts.map( (item, index) => <Post key={index} title={item.title} end_point={item.endpoint} picture={item.image} /> )}
       </main>
       <footer>
         <p>@Reddit Reader, 2025. Created by <span className="bold">Reinis Janovskis</span></p>

@@ -22,7 +22,7 @@ export interface RedditTopicsState {
     }
   }
 
-  const initialPosts = await fetchRedditPosts({end_point: "r/nature", title: "Nature", numberOfPosts: 10})
+  const initialPosts =  await fetchRedditPosts({end_point: "r/nature", title: "Nature", numberOfPosts: 10})
   
   const initialState: RedditTopicsState = {
     title: "Nature",
@@ -69,6 +69,7 @@ export const redditTopicsSlice = createAppSlice({
         changeTopic: create.asyncThunk(
             async (inputData: InputData) => {
                 const response = await fetchRedditPosts(inputData);
+                console.log(response.data);
                 return response.data;
             },
             {
