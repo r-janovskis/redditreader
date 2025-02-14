@@ -1,3 +1,6 @@
+// Imports to handle markdown to HTML transformation
+import { markdownToHTML } from "markdown-transform-html"
+import  "markdown-transform-html/lib/styles/index.css";
 
 export interface InputData {
     // input: {
@@ -9,14 +12,14 @@ export interface InputData {
 
 
 
-// Example call for Reddit API and 10 posts: https://www.reddit.com/r/nature/new.json?count=10
+// Example call for Reddit API and 10 posts: https://www.reddit.com/r/nature/new.json?limit=10
 // We will use format: https://www.reddit.com/${end_point}.json?limit=${numberOfPosts}
 
 export  const  fetchRedditPosts =  async (inputData: InputData): Promise<{ data: any }> => {
     //const response = await fetch(`https://www.reddit.com/${end_point}.json?limit=${numberOfPosts}`)
     const { title, numberOfPosts, end_point } = inputData;
     const redditPosts: any = [];
-    const redditData = await fetch(`https://www.reddit.com/${end_point}.json?count=${numberOfPosts}`)
+    const redditData = await fetch(`https://www.reddit.com/${end_point}.json?limit=${numberOfPosts}`);
 
     if (!redditData.ok) {
         console.log("Damn, something went wrong with fetching data from Reddit API");
@@ -28,7 +31,8 @@ export  const  fetchRedditPosts =  async (inputData: InputData): Promise<{ data:
             redditPosts.push({
                 title: post.data.title,
                 endpoint: post.data.url,
-                image: post.data.thumbnail
+                image: post.data.thumbnail,
+                selftext: markdownToHTML(post.data.selftext)
             })
         })
         //console.log(redditPosts);
