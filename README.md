@@ -116,6 +116,19 @@ For a good craic I decided to add some routing, so that user would see changes i
 - Trickiest part about adding routes came for the tests. Adding **useNavigate()** broke all test cases that were rendering components... To fix that I needed to render components between BrowserRouter tags as in example below:
   **&lt;BrowserRouter>** &lt;Component> **&lt;/BrowserRouter>**
 
+### Working with API
+
+Reddit API documentation and how to use it isn't the greates (in my opinion). But we managed to get it working. For this app I was using `fetch()` command and API endpoint we are calling to is in form `https://www.reddit.com/${end_point}.json?limit=${numberOfPosts}`. At the moment we have limited number of post to retrieved to 10, but as app evolves and if we fancy we can take that limit off.
+
+From the API we are retrieving 4 parameters (even though there are many more returned) that we will use in our post:
+
+- **Title**: title of the post that we are displaying
+- **Image**: thumbnail link that might be missing, but if it's there we will display picture for the post
+- **Description**: selftext property from the returned data. For some categories there is a lot of text in a post that is formatted using markdown. Similarly like with the image - for some posts it is empty.
+- **Link to source**: url property from the returned data. This will be a link that leads to the original source post which might be outside of Reddit
+
+From the afore mentioned four properties we use **description** is the one that required some extra processing before we coud display somewhat decently on a post. For that purpose we used [markdown-plus](https://github.com/acmenlei/markdown-plus) library. All the steps to get it added into a project and basic usage is well described in the link.
+
 ---
 
 # vite-template-redux
