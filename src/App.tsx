@@ -12,7 +12,6 @@ import logo from "./../logo.png"
 const App = () => {
 
   const posts= useSelector(redditPosts);
-  console.log(posts);
 
   return (
     <div className="App">

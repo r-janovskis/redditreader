@@ -31,7 +31,7 @@ export const RedditTopics = () => {
                 <option value="r/hiking">Hiking</option>
                 <option value="r/photography">Photography</option>
                 <option value="r/books">Books</option>
-                <option value="r/basketball">basketball</option>
+                <option value="r/basketball">Basketball</option>
                 <option value="r/crossfit">Crossfit</option>
                 <option value="r/science">Science</option>
             </select>
