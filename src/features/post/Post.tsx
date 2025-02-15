@@ -18,6 +18,7 @@ export const Post = ( {title, end_point, picture, description, index}: PostProps
 useEffect( () => {
     document.getElementById(`postDescription${index}`)!.innerHTML = description;
 }, [description, index])
+
     return (
         <article className={styles.redditPost}>
             <h2>{title}</h2>
