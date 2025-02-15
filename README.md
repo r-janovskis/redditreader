@@ -129,6 +129,18 @@ From the API we are retrieving 4 parameters (even though there are many more ret
 
 From the afore mentioned four properties we use **description** is the one that required some extra processing before we coud display somewhat decently on a post. For that purpose we used [markdown-plus](https://github.com/acmenlei/markdown-plus) library. All the steps to get it added into a project and basic usage is well described in the link.
 
+### Searching in Reddit posts
+
+We implement a simple search function.
+How it works in short:
+
+- User enters a search term or phrase in search bar
+- JavaScript function takes that input and runs through the post titles and changes display properties on posts:
+  - **hiding** posts who don't have a word or term user is looking for in their title
+  - **display** posts that contain searched word or term in their title (this part comes in play as user starts deleting the search term from search bar)
+
+**Note**: we need to keep in mind that search function is only working on the post TITLE!
+
 ---
 
 # vite-template-redux
