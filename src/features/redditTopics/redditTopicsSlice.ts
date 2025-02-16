@@ -8,8 +8,6 @@ export interface RedditTopicsState {
     title: string
     link_name: string
     end_point: string
-    numberOfPosts: number
-    step: number
     posts: any[]
     status: "idle" | "loading" | "failed"
   }
@@ -22,14 +20,12 @@ export interface RedditTopicsState {
     }
   }
 
-  const initialPosts =  await fetchRedditPosts({end_point: "r/nature", title: "Nature", numberOfPosts: 10})
+  const initialPosts =  await fetchRedditPosts({end_point: "r/nature", title: "Nature"})
   
   const initialState: RedditTopicsState = {
     title: "Nature",
     link_name: "nature",
     end_point: "r/nature",
-    numberOfPosts: 10,
-    step: 10,
     posts: initialPosts.data.posts,
     status: "idle"
   };
@@ -53,8 +49,6 @@ const redditTopicsReducer = {
             title: "Nature",
             link_name: "nature",
             end_point: "r/nature",
-            numberOfPosts: 10,
-            step: 10,
             posts: [],
             status: "idle"
         };

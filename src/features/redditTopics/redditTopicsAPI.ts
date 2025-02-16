@@ -5,7 +5,6 @@ import  "markdown-transform-html/lib/styles/index.css";
 export interface InputData {
     // input: {
         title: string
-        numberOfPosts: number
         end_point: string
     // }
 }
@@ -17,7 +16,7 @@ export interface InputData {
 
 export  const  fetchRedditPosts =  async (inputData: InputData): Promise<{ data: any }> => {
     //const response = await fetch(`https://www.reddit.com/${end_point}.json?limit=${numberOfPosts}`)
-    const { title, numberOfPosts, end_point } = inputData;
+    const { title, end_point } = inputData;
     const redditPosts: any = [];
     const redditData = await fetch(`https://www.reddit.com/${end_point}.json`);
 
