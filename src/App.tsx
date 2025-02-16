@@ -24,7 +24,7 @@ const App = () => {
       </header>
       <main>
         <h1>Main part of the page</h1>
-        { posts.map( (item, index) => <Post key={index} index={index} title={item.title} end_point={item.endpoint} picture={item.image} description={item.selftext} /> )}
+        { posts.map( (item, index) => <Post key={index} index={index} title={item.title} end_point={item.endpoint} picture={item.image} description={item.selftext} id={item.id} author={item.author} /> )}
       </main>
       <footer>
         <p>@Reddit Reader, 2025. Created by <span className="bold">Reinis Janovskis</span></p>

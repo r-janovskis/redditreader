@@ -28,7 +28,9 @@ export  const  fetchRedditPosts =  async (inputData: InputData): Promise<{ data:
 
         json.data.children.forEach((post: any) => {
             redditPosts.push({
+                id: post.data.id,
                 title: post.data.title,
+                author: post.data.author,
                 endpoint: post.data.url,
                 image: post.data.thumbnail,
                 selftext: markdownToHTML(post.data.selftext)

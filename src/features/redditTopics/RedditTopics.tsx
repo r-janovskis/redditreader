@@ -14,7 +14,6 @@ export const RedditTopics = () => {
 
         dispatch(changeTopic({
             title: link_name[0].toUpperCase() + link_name.slice(1),
-            numberOfPosts: 10,
             end_point: event.target.value
         }
         ));
