@@ -26,9 +26,9 @@ Project will get data from reddit using API calls and give user a chance to disp
 - [ ] Users can use the application on any modern browser
 - [ ] Users can access your application at a URL
 - [ ] Users see an initial view of the data when first visiting the app
-- [ ] Users can search the data using terms
-- [ ] Users can filter the data based on categories that are predefined
-- [ ] Users are shown a detailed view (modal or new page/route) when they select an item
+- [x] Users can search the data using terms
+- [x] Users can filter the data based on categories that are predefined
+- [x] Users are shown a detailed view (modal or new page/route) when they select an item
 - [ ] Users are delighted with a cohesive design system
 - [ ] Users are delighted with animations and transitions
 - [ ] Users are able to leave an error state

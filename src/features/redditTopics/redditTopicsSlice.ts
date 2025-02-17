@@ -30,31 +30,6 @@ export interface RedditTopicsState {
     status: "idle"
   };
 
-const redditTopicsReducer = {
-    // changeTopic: (state: RedditTopicsState, action: RedditTopicsReducer) => {
-    //     return {
-    //         ...state,
-    //         title: action.payload.title,
-    //         link_name: action.payload.link_name,
-    //         end_point: action.payload.end_point
-    //     };
-    // },
-
-    // changeTopic: create.asyncThunk(
-        
-    // ),
-
-    resetTopic: () => {
-        return {
-            title: "Nature",
-            link_name: "nature",
-            end_point: "r/nature",
-            posts: [],
-            status: "idle"
-        };
-    }
-};
-
 
 export const redditTopicsSlice = createAppSlice({
     name: "redditTopics",
@@ -63,7 +38,7 @@ export const redditTopicsSlice = createAppSlice({
         changeTopic: create.asyncThunk(
             async (inputData: InputData) => {
                 const response = await fetchRedditPosts(inputData);
-                console.log(response.data);
+                //console.log(response.data);
                 return response.data;
             },
             {
