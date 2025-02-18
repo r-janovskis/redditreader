@@ -141,6 +141,25 @@ How it works in short:
 
 **Note**: we need to keep in mind that search function is only working on the post TITLE!
 
+## Comments for the posts
+
+In addition to the requirements I decided to add another feature - chance to see not just the post itself, but it's comments too.
+What started with an idea that it's gonna be easy turned into several hours trying to figure out what's not working. But we got it in the end.
+
+So, how does this feature works?
+
+- We created a new component to display a comment (called Comment)
+- We created another slice to the apps which handles comments for a post.
+  - In the slice we capture ID of the post for which we are getting comments
+  - And an array of comments for the post. Each entry in the array contains author and comment text itself
+- We are fetching comments on request. When user presses a button to display comments, reducer fetches comments for that post using reddit API
+
+In the implementation phase I managed to get lost and made quiet a mess. I was trying to do too much - handle markdown, enter comments as innerHTML elements, use useEffect hooks and some other tricks that didn't produce results I hoped for and just created some 'head scratching' moments... In the end we implemented it in simple manner:
+
+- User clicks the button to show comments
+- We despatch a reducer to fetch comments using Reddit API
+- When comments are retrieved component gets re-rendered and we see comments appearing under the post.
+
 ---
 
 # vite-template-redux

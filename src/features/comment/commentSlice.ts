@@ -42,7 +42,7 @@ export const commentsSlice = createAppSlice({
                   state.status = "loading"
                 },
                 fulfilled: (state, action) => {
-                  console.log(action.payload.comments);
+                  //console.log(action.payload.comments);
                   state.id = action.payload.id
                   state.comments = action.payload.comments
                   state.status = "idle"

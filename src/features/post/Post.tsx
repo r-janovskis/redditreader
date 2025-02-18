@@ -40,8 +40,8 @@ export const Post = ( post: PostProps ) => {
             document.getElementById(`comments${event.target.id}`)!.style.display = "none";
         } else {
             await dispatch(getComments({subreddit: subreddit, post_id: event.target.id}));
-            console.log(subreddit);
-            console.log(event.target.id);
+            // console.log(subreddit);
+            // console.log(event.target.id);
 
             Array.from(document.getElementsByClassName("postComments")).forEach( container => {
                 const htmlContainer = container as HTMLElement;
@@ -55,10 +55,10 @@ export const Post = ( post: PostProps ) => {
         
     }
 
-    useEffect( () => {
-        //console.log(comments);
-        //const commentsContainer = document.getElementById(`comments${id}`);
-    }, [comments, subreddit])
+    // useEffect( () => {
+    //     //console.log(comments);
+    //     //const commentsContainer = document.getElementById(`comments${id}`);
+    // }, [comments])
     
 
     // useEffect( () => {
