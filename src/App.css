@@ -4,11 +4,14 @@ Formatting of main areas of the page -> header, main and footer
 -----------------------------------------------------------------------------------------------------------------
 */
 header {
-  background-color: lightblue;
-  display: flex;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
   align-items: center;
-  justify-content: space-between;
-  font-size: calc(10px + 2vmin);
+  justify-items: center;
+
+  background-color: rgb(112, 76, 182);
+  /* font-size: calc(10px + 2vmin); */
 }
 
 main {
@@ -21,11 +24,6 @@ footer {
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .bold {
