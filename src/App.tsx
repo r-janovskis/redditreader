@@ -5,24 +5,23 @@ import { SearchBar } from "./features/searchBar/SearchBar";
 import { RedditTopics } from "./features/redditTopics/RedditTopics";
 import { Post } from "./features/post/Post";
 import { Logo } from "./features/logo/Logo";
-import { redditPosts } from "./features/redditTopics/redditTopicsSlice";
+import { redditPosts, redditTitle } from "./features/redditTopics/redditTopicsSlice";
 import { useSelector } from "react-redux";
-import logo from "./../logo.png"
 
 const App = () => {
   
   const posts= useSelector(redditPosts);
+  const topic = useSelector(redditTitle);
 
   return (
     <div className="App">
-      <header>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      <header className={`sticky-top`}>
         <Logo />
         <SearchBar />
         <RedditTopics />
       </header>
       <main>
-        <h1>Main part of the page</h1>
+        <h1>Reddit {topic} Posts</h1>
         { posts.map( (item, index) => <Post key={index} index={index} title={item.title} end_point={item.endpoint} picture={item.image} description={item.selftext} id={item.id} author={item.author} /> )}
       </main>
       <footer>
