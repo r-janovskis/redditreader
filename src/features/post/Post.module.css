@@ -9,7 +9,15 @@
   max-width: 100%;
 }
 
+.author {
+  margin-top: 5px;
+}
+
 .postComments {
   border: 1px double blue;
   display: none;
+}
+
+.author cite {
+  font-weight: 700;
 }
