@@ -69,14 +69,27 @@ export const Post = ( post: PostProps ) => {
     // }, [description, index]);
 
     return (
-        <article className={styles.redditPost}>
-            <h2>{title}</h2>
-            <img src={picture} alt={title} />
-            <section id={`postDescription${index}`}>{description}</section>
-            <p>Author: {author}</p>
-            <p>Link to source: <a href={end_point} target="_blank">{end_point}</a></p>
-            <button id={id} onClick={handleClick}>Show comments</button>
-            <section id={`comments${id}`} className="postComments">{comments.map( (comment, index) => <Comment key={index} author={comment.author} body={comment.comment} /> )}</section>
-        </article>
+        // <article className={styles.redditPost}>
+        //     <h2>{title}</h2>
+
+        //     <img src={picture} alt={title} />
+        //     <section id={`postDescription${index}`}>{description}</section>
+        //     <p>Author: {author}</p>
+        //     <p>Link to source: <a href={end_point} target="_blank">{end_point}</a></p>
+        //     <button id={id} onClick={handleClick}>Show comments</button>
+        //     <section id={`comments${id}`} className="postComments">{comments.map( (comment, index) => <Comment key={index} author={comment.author} body={comment.comment} /> )}</section>
+        // </article>
+        <div className={`card ${styles.redditPost}`} >
+            {(picture != "self" && picture != "default") && <img src={picture} className={`card-img-top`} alt={title} />}
+        {/* <img src="..." class="card-img-top" alt="..."> */}
+        <div className="card-body">
+          <h2 className="card-title">{title}</h2>
+          <p className={`blockquote-footer`}>Created by: <cite title="Author">{author}</cite></p>
+          <p className="card-text" id={`postDescription${index}`}>{description}</p>
+          <a href="#" className="btn btn-primary" target="_blank ">View Original</a>
+          <button id={id} className={`btn btn-primary`} onClick={handleClick}>Show comments</button>
+          <section id={`comments${id}`} className="postComments">{comments.map( (comment, index) => <Comment key={index} author={comment.author} body={comment.comment} /> )}</section>
+        </div>
+      </div>
     );
 };
