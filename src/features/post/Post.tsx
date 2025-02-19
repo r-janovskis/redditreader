@@ -80,13 +80,13 @@ export const Post = ( post: PostProps ) => {
         //     <section id={`comments${id}`} className="postComments">{comments.map( (comment, index) => <Comment key={index} author={comment.author} body={comment.comment} /> )}</section>
         // </article>
         <div className={`card ${styles.redditPost}`} >
-            {(picture != "self" && picture != "default") && <img src={picture} className={`card-img-top`} alt={title} />}
+            {(picture != "self" && picture != "default") && <img src={picture} className={`card-img-top ${styles.postImage}`} alt={title} />}
         {/* <img src="..." class="card-img-top" alt="..."> */}
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
           <p className={`blockquote-footer`}>Created by: <cite title="Author">{author}</cite></p>
           <p className="card-text" id={`postDescription${index}`}>{description}</p>
-          <a href="#" className="btn btn-primary" target="_blank ">View Original</a>
+          <a href={end_point} className="btn btn-primary" target="_blank ">View Original</a>
           <button id={id} className={`btn btn-primary`} onClick={handleClick}>Show comments</button>
           <section id={`comments${id}`} className="postComments">{comments.map( (comment, index) => <Comment key={index} author={comment.author} body={comment.comment} /> )}</section>
         </div>

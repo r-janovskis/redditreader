@@ -18,7 +18,7 @@ export  const  fetchRedditPosts =  async (inputData: InputData): Promise<{ data:
     //const response = await fetch(`https://www.reddit.com/${end_point}.json?limit=${numberOfPosts}`)
     const { title, end_point } = inputData;
     const redditPosts: any = [];
-    const redditData = await fetch(`https://www.reddit.com/${end_point}.json`);
+    const redditData = await fetch(`https://www.reddit.com/${end_point}.json?raw_json=1`);
 
     if (!redditData.ok) {
         console.log("Damn, something went wrong with fetching data from Reddit API");
@@ -35,7 +35,8 @@ export  const  fetchRedditPosts =  async (inputData: InputData): Promise<{ data:
                 title: post.data.title,
                 author: post.data.author,
                 endpoint: post.data.url,
-                image: post.data.thumbnail,
+                //image: post.data.thumbnail,
+                image: post.data.thumbnail == "self" || post.data.thumbnail == "default" ? post.data.thumbnail : post.data.preview?.images[0].source.url,
                 selftext: post.data.selftext
             })
         })

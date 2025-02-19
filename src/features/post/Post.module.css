@@ -1,6 +1,12 @@
 .redditPost {
   border: 2px solid black;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.postImage {
+  max-width: 100%;
 }
 
 .postComments {
