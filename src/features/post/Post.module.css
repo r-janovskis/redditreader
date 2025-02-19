@@ -1,8 +1,8 @@
 .redditPost {
   border: 2px solid black;
-  margin: 0.5rem auto;
+  margin: 2rem auto;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 .postImage {
@@ -13,16 +13,25 @@
   margin-top: 5px;
 }
 
+.actionContainer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
 .postComments {
   border: 1px double blue;
   display: none;
 }
 
-.commentIcon {
+/* .commentIcon {
+  display: block;
   cursor: pointer;
   font-size: 2em;
   color: gray;
-}
+} */
 
 .author cite {
   font-weight: 700;

@@ -99,8 +99,11 @@ export const Post = ( post: PostProps ) => {
           <h2 className="card-title">{title}</h2>
           <p className={styles.author}>Created by: <cite title="Author">{author}</cite></p>
           <p className="card-text" id={`postDescription${index}`}>{description}</p>
-          <a href={end_point} className="btn btn-primary" target="_blank ">View Original</a>
-          <i id={id} onClick={handleClick} title="See comments" className={`bi bi-chat-right ${styles.commentIcon}`}></i> 
+          <div className={styles.actionContainer}>         
+            <a href={end_point} className="btn btn-outline-secondary" target="_blank ">View Original</a>
+            <i id={id} onClick={handleClick} title="See comments" className={`btn btn-outline-secondary bi bi-chat-right ${styles.commentIcon}`}> Comments</i>
+          </div>
+
           <section id={`comments${id}`} className="postComments">{comments.map( (comment, index) => <Comment key={index} author={comment.author} body={comment.comment} /> )}</section>
         </div>
       </div>
