@@ -35,9 +35,15 @@ export const Post = ( post: PostProps ) => {
     const dispatch = useAppDispatch();
 
     const handleClick = async (event: any) => {
+        
+        
+        console.log(`${event.target.id} -> ${event.target.classList}`);
+
 
         if (document.getElementById(`comments${event.target.id}`)?.style.display === "block") {
             document.getElementById(`comments${event.target.id}`)!.style.display = "none";
+            // event.target.classList.remove('bi-chat-right-fill');
+            // event.target.classList.add('bi-chat-right');
         } else {
             await dispatch(getComments({subreddit: subreddit, post_id: event.target.id}));
             // console.log(subreddit);
@@ -47,12 +53,19 @@ export const Post = ( post: PostProps ) => {
                 const htmlContainer = container as HTMLElement;
                 if (htmlContainer.id === `comments${id}`) {
                     htmlContainer.style.display = "block";
-                } else {
+                    // event.target.classList.remove('bi-chat-right');
+                    // event.target.classList.add('bi-chat-right-fill');
+                } 
+                else {
                     htmlContainer.style.display = "none";
+                    // event.target.classList.remove('bi-chat-right-fill');
+                    // event.target.classList.add('bi-chat-right');
                 }
             });
         }
-        
+        // console.log(`${event.target.id} -> ${event.target.classList}`);
+        event.target.classList.toggle('bi-chat-right-fill');
+        event.target.classList.toggle('bi-chat-right');        
     }
 
     // useEffect( () => {
@@ -87,7 +100,7 @@ export const Post = ( post: PostProps ) => {
           <p className={styles.author}>Created by: <cite title="Author">{author}</cite></p>
           <p className="card-text" id={`postDescription${index}`}>{description}</p>
           <a href={end_point} className="btn btn-primary" target="_blank ">View Original</a>
-          <button id={id} className={`btn btn-primary`} onClick={handleClick}>Show comments</button>
+          <i id={id} onClick={handleClick} title="See comments" className={`bi bi-chat-right ${styles.commentIcon}`}></i> 
           <section id={`comments${id}`} className="postComments">{comments.map( (comment, index) => <Comment key={index} author={comment.author} body={comment.comment} /> )}</section>
         </div>
       </div>
