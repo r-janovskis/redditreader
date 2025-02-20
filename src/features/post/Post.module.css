@@ -22,8 +22,10 @@
 }
 
 .postComments {
-  border: 1px double blue;
   display: none;
+
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
 /* .commentIcon {

@@ -104,7 +104,7 @@ export const Post = ( post: PostProps ) => {
             <i id={id} onClick={handleClick} title="See comments" className={`btn btn-outline-secondary bi bi-chat-right ${styles.commentIcon}`}> Comments</i>
           </div>
 
-          <section id={`comments${id}`} className="postComments">{comments.map( (comment, index) => <Comment key={index} author={comment.author} body={comment.comment} /> )}</section>
+          <section id={`comments${id}`} className={`postComments ${styles.postComments}`}>{comments.map( (comment, index) => <Comment key={index} author={comment.author} body={comment.comment} /> )}</section>
         </div>
       </div>
     );

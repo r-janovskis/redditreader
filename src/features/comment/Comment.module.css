@@ -1,0 +1,12 @@
+.commentContainer {
+  margin: 1rem;
+}
+
+.commentAuthor,
+.commentText {
+  text-align: left;
+}
+
+.commentAuthor cite {
+  font-weight: 700;
+}
