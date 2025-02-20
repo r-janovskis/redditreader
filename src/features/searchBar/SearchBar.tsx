@@ -26,8 +26,7 @@ export const SearchBar = () => {
 
     return (
         <div className={style.searchBar}>
-            <label htmlFor="searchPosts">Search Posts:</label>
-            <input id="searchPosts" type="text" placeholder="Search posts..." onChange={handleChange} />
+            <input id="searchPosts" type="text" placeholder="Search posts for..." onChange={handleChange} />
         </div>
     );
 };

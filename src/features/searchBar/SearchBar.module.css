@@ -8,5 +8,7 @@
 
 .searchBar input {
   width: 100%;
-  height: 2rem;
+  height: 3rem;
+  border-radius: 5px;
+  padding-left: 1rem;
 }
