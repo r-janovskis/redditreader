@@ -5,7 +5,7 @@ import styles from "./Post.module.css";
 import { getComments, redditPostComments, postId } from "../comment/commentSlice";
 import { Comment } from "../comment/Comment";
 import { useAppDispatch } from "../../app/hooks";
-import { useEffect } from "react";
+import { useEffect, useState} from "react";
 import { redditEndPoint } from "../redditTopics/redditTopicsSlice";
 import { useSelector } from "react-redux";
 
@@ -31,14 +31,17 @@ export const Post = ( post: PostProps ) => {
 
     const subreddit = useSelector(redditEndPoint);
     let comments = useSelector(redditPostComments);
-    //const post_id = useSelector(postId);
+    const post_id = useSelector(postId);
     const dispatch = useAppDispatch();
+
+
 
     const handleClick = async (event: any) => {
         
         
-        console.log(`${event.target.id} -> ${event.target.classList}`);
+        // console.log(`${event.target.id} -> ${event.target.classList}`);
 
+        //toggleIcon();
 
         if (document.getElementById(`comments${event.target.id}`)?.style.display === "block") {
             document.getElementById(`comments${event.target.id}`)!.style.display = "none";
@@ -51,7 +54,7 @@ export const Post = ( post: PostProps ) => {
 
             Array.from(document.getElementsByClassName("postComments")).forEach( container => {
                 const htmlContainer = container as HTMLElement;
-                if (htmlContainer.id === `comments${id}`) {
+                if (htmlContainer.id === `comments${event.target.id}`) {
                     htmlContainer.style.display = "block";
                     // event.target.classList.remove('bi-chat-right');
                     // event.target.classList.add('bi-chat-right-fill');
@@ -61,17 +64,27 @@ export const Post = ( post: PostProps ) => {
                     // event.target.classList.remove('bi-chat-right-fill');
                     // event.target.classList.add('bi-chat-right');
                 }
-            });
+            });    
         }
-        // console.log(`${event.target.id} -> ${event.target.classList}`);
-        event.target.classList.toggle('bi-chat-right-fill');
-        event.target.classList.toggle('bi-chat-right');        
+
+        document.getElementById(event.target.id)?.classList.toggle('bi-chat-right-fill');
+        document.getElementById(event.target.id)?.classList.toggle('bi-chat-right');  
     }
 
-    // useEffect( () => {
-    //     //console.log(comments);
-    //     //const commentsContainer = document.getElementById(`comments${id}`);
-    // }, [comments])
+    const toggleIcons = () => {
+        Array.from(document.getElementsByClassName("bi-chat-right-fill")).forEach( icon => {
+            icon.classList.toggle('bi-chat-right-fill');
+            icon.classList.toggle('bi-chat-right');
+        });
+        // document.getElementById(id)!.classList.toggle('bi-chat-right-fill');
+        // document.getElementById(id)!.classList.toggle('bi-chat-right');   
+    }
+
+    useEffect( () => {
+        //console.log(comments);
+        //const commentsContainer = document.getElementById(`comments${id}`);
+        toggleIcons();
+    }, [subreddit])
     
 
     // useEffect( () => {
