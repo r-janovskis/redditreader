@@ -1,5 +1,6 @@
 "use client";
 import { changeTopic } from "./redditTopicsSlice";
+import { resetComments } from "../comment/commentSlice";
 import { useAppDispatch } from "../../app/hooks";
 import { useNavigate } from "react-router-dom";
 import styles from "./RedditTopics.module.css";
@@ -17,6 +18,8 @@ export const RedditTopics = () => {
             end_point: event.target.value
         }
         ));
+
+        dispatch(resetComments());
     //console.log(`navigating to -> ${link_name}`);
     navigate(link_name);
     

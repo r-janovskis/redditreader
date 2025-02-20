@@ -52,6 +52,11 @@ export const commentsSlice = createAppSlice({
                 },
               },
         ),
+        resetComments: create.reducer( state => {
+          state.id = "",
+          state.comments = [],
+          state.status = "idle"
+        })
     }),
     selectors: {
         redditPostComments: (state: CommentsState) => state.comments,
@@ -60,5 +65,5 @@ export const commentsSlice = createAppSlice({
 });
 
 
-export const { getComments } = commentsSlice.actions;
+export const { getComments, resetComments } = commentsSlice.actions;
 export const { redditPostComments, postId } = commentsSlice.selectors;
