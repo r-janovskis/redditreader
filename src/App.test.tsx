@@ -20,7 +20,7 @@ describe("App launches correctly and renders with all elements", () => {
   })
 
   it("App has search bar", () => {
-    expect(screen.getByPlaceholderText("Search posts...")).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Search posts for...")).toBeInTheDocument();
   })
 
   // it("App has at least one post rendered", () => {
