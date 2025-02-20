@@ -41,7 +41,7 @@ export const Post = ( post: PostProps ) => {
         
         // console.log(`${event.target.id} -> ${event.target.classList}`);
 
-        //toggleIcon();
+        toggleIcons();
 
         if (document.getElementById(`comments${event.target.id}`)?.style.display === "block") {
             document.getElementById(`comments${event.target.id}`)!.style.display = "none";
