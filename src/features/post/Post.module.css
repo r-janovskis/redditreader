@@ -28,13 +28,6 @@
   overflow-y: scroll;
 }
 
-/* .commentIcon {
-  display: block;
-  cursor: pointer;
-  font-size: 2em;
-  color: gray;
-} */
-
 .author cite {
   font-weight: 700;
 }

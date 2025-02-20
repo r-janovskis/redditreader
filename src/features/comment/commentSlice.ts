@@ -1,5 +1,3 @@
-
-//import type { PayloadAction } from "@reduxjs/toolkit"
 import { createAppSlice } from "../../app/createAppSlice"
 import type { AppThunk } from "../../app/store"
 import { fetchComments } from "./commentsAPI"
@@ -42,7 +40,6 @@ export const commentsSlice = createAppSlice({
                   state.status = "loading"
                 },
                 fulfilled: (state, action) => {
-                  //console.log(action.payload.comments);
                   state.id = action.payload.id
                   state.comments = action.payload.comments
                   state.status = "idle"

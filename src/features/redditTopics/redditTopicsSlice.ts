@@ -12,14 +12,6 @@ export interface RedditTopicsState {
     status: "idle" | "loading" | "failed"
   }
 
-  interface RedditTopicsReducer {
-    payload: {
-        title: string
-        link_name: string
-        end_point: string
-    }
-  }
-
   const initialPosts =  await fetchRedditPosts({end_point: "r/nature", title: "Nature"})
   
   const initialState: RedditTopicsState = {

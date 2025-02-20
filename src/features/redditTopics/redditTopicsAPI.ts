@@ -35,23 +35,10 @@ export  const  fetchRedditPosts =  async (inputData: InputData): Promise<{ data:
                 title: post.data.title,
                 author: post.data.author,
                 endpoint: post.data.url,
-                //image: post.data.thumbnail,
                 image: post.data.thumbnail == "self" || post.data.thumbnail == "default" ? post.data.thumbnail : post.data.preview?.images[0].source.url,
                 selftext: post.data.selftext
             })
         })
-        //console.log(redditPosts);
-    }
-
-    // const fetchedData: FetchedElement[] = [];
-    // for (let i = 0; i < numberOfPosts; i++) {
-    //     fetchedData.push({
-    //         title: `${title} Post Nr. ${i + 1}`,
-    //         endpoint: `End-point to fetch data from Reddit API: ${end_point}`
-    //     })
-    // }
-    // return new Promise<{ data: any }>(resolve =>
-    //     setTimeout(() => resolve({ data: {title: title, end_point: end_point, posts: fetchedData} }), 500),
-    // )    
+    } 
     return new Promise <{ data: any }>  ( resolve => resolve ({data: {title: title, end_point: end_point, posts: redditPosts}}));
 }

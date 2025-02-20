@@ -20,7 +20,6 @@ export const RedditTopics = () => {
         ));
 
         dispatch(resetComments());
-    //console.log(`navigating to -> ${link_name}`);
     navigate(link_name);
     
     }

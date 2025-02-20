@@ -1,6 +1,4 @@
 import "./App.css";
-import { Counter } from "./features/counter/Counter";
-import { Quotes } from "./features/quotes/Quotes";
 import { SearchBar } from "./features/searchBar/SearchBar";
 import { RedditTopics } from "./features/redditTopics/RedditTopics";
 import { Post } from "./features/post/Post";
