@@ -14,9 +14,15 @@ header {
   justify-content: center;
 
   /* background-color: rgb(244, 233, 140); */
+
+  /* font-size: calc(10px + 2vmin); */
+}
+
+header,
+footer {
+  color: white;
   background-color: rgb(112, 76, 182);
   opacity: 0.9;
-  /* font-size: calc(10px + 2vmin); */
 }
 
 header img {
@@ -27,8 +33,9 @@ main {
   background-color: white;
 }
 
-footer {
-  background-color: lightgray;
+footer p {
+  margin: 0;
+  padding: 10px;
 }
 
 .App {
