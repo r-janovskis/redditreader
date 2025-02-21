@@ -41,6 +41,9 @@ export const Post = ( post: PostProps ) => {
 
         if (document.getElementById(`comments${event.target.id}`)?.style.display === "block") {
             document.getElementById(`comments${event.target.id}`)!.style.display = "none";
+
+            event.target.classList.toggle('bi-chat-right-fill');
+            event.target.classList.toggle('bi-chat-right');
         } else {
             await dispatch(getComments({subreddit: subreddit, post_id: event.target.id}));
 

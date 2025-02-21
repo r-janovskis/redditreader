@@ -1,4 +1,5 @@
 .redditTopics {
+  grid-area: redditTopics;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,4 +14,11 @@
 .redditTopics select {
   width: 100%;
   height: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .redditTopics select {
+    width: 100%;
+    height: 1.5rem;
+  }
 }

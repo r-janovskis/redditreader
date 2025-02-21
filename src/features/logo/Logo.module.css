@@ -1,4 +1,6 @@
 .logo {
+  grid-area: logo;
+
   max-height: 100px;
   height: 85%;
   justify-self: flex-start;

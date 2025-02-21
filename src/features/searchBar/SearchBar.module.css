@@ -1,4 +1,5 @@
 .searchBar {
+  grid-area: searchBar;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -11,4 +12,23 @@
   height: 3rem;
   border-radius: 5px;
   padding-left: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .searchBar {
+    width: 100%;
+  }
+
+  .searchBar input {
+    width: 100%;
+    height: 1.5rem;
+    border-radius: 5px;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .searchBar {
+    width: 95%;
+  }
 }
