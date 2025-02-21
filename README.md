@@ -20,25 +20,25 @@ Project will get data from reddit using API calls and give user a chance to disp
   - Features
   - Future work
 
-- [ ] Write unit tests for your components using Jest and Enzyme
-- [ ] Write end-to-end tests for your application
-- [ ] Users can use the application on any device (desktop to mobile)
-- [ ] Users can use the application on any modern browser
-- [ ] Users can access your application at a URL
-- [ ] Users see an initial view of the data when first visiting the app
+- [x] Write unit tests for your components using Jest and Enzyme
+- [x] Write end-to-end tests for your application
+- [x] Users can use the application on any device (desktop to mobile)
+- [x] Users can use the application on any modern browser
+- [x] Users can access your application at a URL
+- [x] Users see an initial view of the data when first visiting the app
 - [x] Users can search the data using terms
 - [x] Users can filter the data based on categories that are predefined
 - [x] Users are shown a detailed view (modal or new page/route) when they select an item
-- [ ] Users are delighted with a cohesive design system
-- [ ] Users are delighted with animations and transitions
-- [ ] Users are able to leave an error state
+- [x] Users are delighted with a cohesive design system
+- [x] Users are delighted with animations and transitions
+- [x] Users are able to leave an error state
 - [ ] Get 90+ scores on [Lighthouse](https://pagespeed.web.dev/)
 
   - We understand you cannot control how media assets like videos and images are sent to the client. It is okay to have a score below 90 for Performance if they are related to the media from Reddit.
 
 - [ ] **OPTIONAL**: Get a custom domain name and use it for your application
-- [ ] **OPTIONAL**: Set up a CI/CD workflow to automatically deploy your application when the master branch in the repository changes
-- [ ] **OPTIONAL**: Make your application a progressive web app
+- [x] **OPTIONAL**: Set up a CI/CD workflow to automatically deploy your application when the master branch in the repository changes
+- [x] **OPTIONAL**: Make your application a progressive web app
 
 ## Tools used for the project
 
@@ -181,6 +181,12 @@ My app now resides at [rjanovskis-redditreader.surge.sh](https://rjanovskis-redd
 **Note:** If we want to take deployed site down we can use command `surge teardown <domain_name>.surge.sh`
 
 **Note 2:** There is a bug that surge pages has... On reload app crashes. I had noticed it in previous projects as well and had no idea how to handle it, because it was wokring fine and wasn't reproducible in dev environment locally. As it turns out we can fix it by changing name of index.html to 200.html in distribution (build) folder after we have built the application before we deploy it to surge. A bit longer description of the solution to this issue is [here](https://medium.com/@ezplora/fix-direct-url-reload-errors-on-react-router-for-surge-sh-users-243624565742).
+
+## Impressions about TypeScript
+
+It took me a while to understand how TypeScript works and how to use it. But as I got a bit more familiar with it, I can see how it can prevent some mistakes. I think the possibility to define interfaces for input/output data for functions and objects is pretty cool and useful if utilised well. It can save time de-bugging time later as you won't be able to compile code if something isn't matching as expected, you will get error instead. Times I have spent hours debugging something just to find out there is a type mismatch somewhere...
+
+I would say there is still a lot to learn for me about TypeScript and I didn't use it's funcitonality to the fullest. Room to improve.
 
 ---
 
