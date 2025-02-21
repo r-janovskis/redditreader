@@ -18,7 +18,7 @@ export interface RedditTopicsState {
     title: "Nature",
     link_name: "nature",
     end_point: "r/nature",
-    posts: initialPosts.data.posts,
+    posts: (await fetchRedditPosts({end_point: "r/nature", title: "Nature"})).data.posts,
     status: "idle"
   };
 
