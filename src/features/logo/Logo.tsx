@@ -6,7 +6,7 @@ export const Logo = () => {
     return (
         <img
             className={style.logo}
-            src='./../logo.png'
+            src='./../../logo.png'
             alt="Reddit Reader Logo"
         />
     );

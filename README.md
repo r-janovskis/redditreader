@@ -160,6 +160,24 @@ In the implementation phase I managed to get lost and made quiet a mess. I was t
 - We despatch a reducer to fetch comments using Reddit API
 - When comments are retrieved component gets re-rendered and we see comments appearing under the post.
 
+## Deploying application
+
+After all the work has been done we deploy the app.
+For this purpose we will use surge - Static web publishing for Front-End Developers service. You can learn more about surge on their website [https.//surge.sh](https://surge.sh/).
+
+To check if you have surge already available run command `surge --version` in your command line console. If you get a version number, you can continu to the steps below, otwhervise set up surge but following [these instructions](https://surge.sh/help/getting-started-with-surge).
+
+Steps to deploy your web app with surge:
+
+1. Open a command line console and navigate to your project folder
+2. Build a deployable version of your app by running command `npm run build`
+3. When build version has been created move into that directory `cd dist`
+4. When inside that folder run command `surge`
+5. At one point you will be asked to provide a domain name. You can change it or stick with the default one. I will pick `rjanovskis-redditreader.surge.sh` for this project
+6. After that work is done you can go to the picked domain name and see if app works as expected.
+
+My app now resides at [rjanovskis-redditreader.surge.sh](https://rjanovskis-redditreader.surge.sh)
+
 ---
 
 # vite-template-redux
