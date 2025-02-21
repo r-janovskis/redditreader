@@ -178,6 +178,8 @@ Steps to deploy your web app with surge:
 
 My app now resides at [rjanovskis-redditreader.surge.sh](https://rjanovskis-redditreader.surge.sh)
 
+**Note:** If we want to take deployed site down we can use command `surge teardown <domain_name>.surge.sh`
+
 ---
 
 # vite-template-redux
