@@ -180,7 +180,7 @@ My app now resides at [rjanovskis-redditreader.surge.sh](https://rjanovskis-redd
 
 **Note:** If we want to take deployed site down we can use command `surge teardown <domain_name>.surge.sh`
 
-**Note:** There is a bug that surge pages has... On reload app crashes. I had noticed it in previous projects as well and had no idea how to handle it, because it was wokring fine and wasn't reproducible in dev environment locally. As it turns out we can fix it by changing name of index.html to 200.html in distribution (build) folder after we have built the application before we deploy it to surge. A bit longer description of the solution to this issue is [here](https://medium.com/@ezplora/fix-direct-url-reload-errors-on-react-router-for-surge-sh-users-243624565742).
+**Note 2:** There is a bug that surge pages has... On reload app crashes. I had noticed it in previous projects as well and had no idea how to handle it, because it was wokring fine and wasn't reproducible in dev environment locally. As it turns out we can fix it by changing name of index.html to 200.html in distribution (build) folder after we have built the application before we deploy it to surge. A bit longer description of the solution to this issue is [here](https://medium.com/@ezplora/fix-direct-url-reload-errors-on-react-router-for-surge-sh-users-243624565742).
 
 ---
 
